@@ -10,6 +10,16 @@ module.exports = function (app) {
   });
   //When user submits a post request to server, calculate compatible match, return match as modal, and save their data into breads.js
   app.post("/api/breads"), function(req, res) {
-
+    let newScores;
+    newScores.push(req.body.scores);
+    console.log(newScores);
+    function diff(a, b) {
+      return Math.abs(a - b);
+    };
+    for (let i = 0; i < breadData.length; i++) {
+      let currentScores = breadData[i].scores
+      console.log(diff(newScores, currentScores));
+    };
+    //breadData.push(req.body)
   };
 }
