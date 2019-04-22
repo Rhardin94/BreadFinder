@@ -1,7 +1,7 @@
 //File that does all the routing for interacting with the api
 //Importing exsiting survey data to use later
 const breadData = require("../data/breads");
-//Actual routing beings now
+//Actual routing begins now
 //When user interacts with the server, perform these functions 
 module.exports = function (app) {
   //When user submits a get request, return breadData as JSON;

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Required Meta Tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Title-->
+    <title>BreadSurvey</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Required scripts for dropdowns and boostrap generally-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+  </head>
+  <body>
+    <div class="container mw-75">
+      <h2 class="mt-2 mb-2">Survey Questions</h2>
+      <hr>
+      <form>
+        <h4><strong>About you</strong></h4>
+        <div class="form-row">
+          <label for="name">Name (Required)</label>
+          <input type="text" id="name" class="form-control">
+          <label for="photo">Link to Photo (Required)</label>
+          <input type="text" id="photo" class="form-control">
+        </div>
+        <hr>
+        <h4><strong>Question 1</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q1">You prefer baking temperatures above 375&deg;F</label>
+            <select class="form-control mr-sm-2" id="q1">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <h4><strong>Question 2</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q2">You find yourself often sliced into small portions</label>
+            <select class="form-control mr-sm-2" id="q2">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <h4><strong>Question 3</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q3">You identify as a more international recipe</label>
+            <select class="form-control  mr-sm-2" id="q3">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <h4><strong>Question 4</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q4">You are usually the foundation of a great sandwich</label>
+            <select class="form-control mr-sm-2" id="q4">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <h4><strong>Question 5</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q5">Your allegiance is to a healthier digestive system</label>
+            <select class="form-control mr-sm-2" id="q5">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <h4><strong>Question 6</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q6"></label>
+            <select class="form-control mr-sm-2" id="q6">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <h4><strong>Question 7</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q7">Preferences</label>
+            <select class="form-control mr-sm-2" id="q7">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <h4><strong>Question 8</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q8">Preferences</label>
+            <select class="form-control mr-sm-2" id="q8">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <h4><strong>Question 9</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q9">Preferences</label>
+            <select class="form-control mr-sm-2" id="q9">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+          <h4><strong>Question 10</strong></h4>
+          <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+              <label for="q10">Preferences</label>
+              <select class="form-control mr-sm-2" id="q10">
+                <option selected class="text-muted">Choose...</option>
+                <option value="1">One (Strongly Disagree)</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+                <option value="5">Five (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+          <hr>
+          <div class="form-row">
+            <div class="col-auto my-1">
+              <button type="submit" class="btn btn-warning" id="submitBtn">Submit</button>
+            </div>
+          </div>
+      </form>
+    </div>
+    <script>
+      $("#submitBtn").on("click", function(event) {
+        event.preventDefault();
+        function validateForm() {
+          let isValid = true;
+          $(".form-control").each(function() {
+            if ($(this).val() === "") {
+              isValid = false;
+            }
+          });
+          return isValid;
+        }
+        if (validateForm()) {
+          let userBread = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            scores: [
+              $("#q1").val(),
+              $("#q2").val(),
+              $("#q3").val(),
+              $("#q4").val(),
+              $("#q5").val(),
+              $("#q6").val(),
+              $("#q7").val(),
+              $("#q8").val(),
+              $("#q9").val(),
+              $("#q10").val()
+            ]
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

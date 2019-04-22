@@ -2,6 +2,9 @@
 const breads = [
     {
         name: "Rye",
-        photo: ""
+        photo: "",
+        scores: [
+            
+        ]
     }
 ]
