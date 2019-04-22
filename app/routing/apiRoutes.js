@@ -15,17 +15,21 @@ module.exports = function (app) {
       return Math.abs(a - b);
     };
     //Capturing the user's submitted scores
-    let newScores = req.body.scores;
-    //Loggin them to make sure they are received
+    let userScores = req.body.scores;
+    //Converting the user's array of strings into an array of integers
+    let newScores = userScores.map(x => parseInt(x));
+    //Logging them to make sure they are received
+    console.log("User Score");
     console.log(newScores);
     //Loop through the breadData array already on server
     for (let i = 0; i < breadData.length; i++) {
-      //Assign the scores arrays of each index to a variable
+      //Assign the scores array of each index to a variable
       let currentScores = breadData[i].scores
       //Log each array to the console
+      console.log("Server Score");
       console.log(currentScores);
-      //Attempt to caluclate the difference between each number in user score and existig score
-      //console.log(diff(newScores, currentScores));
+      //Attempt to caluclate the difference between each number in user score and existing score
+      console.log(newScores.map(x => Math.abs(x - currentScores)));
     };
     //breadData.push(req.body)
   });
