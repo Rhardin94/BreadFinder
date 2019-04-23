@@ -26,10 +26,11 @@ module.exports = function (app) {
       //Assign the scores array of each index to a variable
       let currentScores = breadData[i].scores
       //Log each array to the console
-      console.log("Server Score");
-      console.log(currentScores);
+      for (let j = 0; j < currentScores.length; j++) {
+        console.log(currentScores[j]);
+        //console.log(newScores.map(x => Math.abs(x - currentScores[j])));
+      }
       //Attempt to caluclate the difference between each number in user score and existing score
-      console.log(newScores.map(x => Math.abs(x - currentScores)));
     };
     //breadData.push(req.body)
   });
