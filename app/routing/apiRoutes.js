@@ -5,11 +5,11 @@ const breadData = require("../data/breads");
 //When user interacts with the server, perform these functions 
 module.exports = function (app) {
   //When user submits a get request, return breadData as JSON;
-  app.get("/api/breads", function(req, res) {
+  app.get("/api/breads", function (req, res) {
     res.json(breadData);
   });
   //When user submits a post request to server, calculate compatible match, return match as modal, and save their data into breads.js
-  app.post("/api/breads", function(req, res) {
+  app.post("/api/breads", function (req, res) {
     //Current function to try to caluclate the difference between scores
     function diff(a, b) {
       return Math.abs(a - b);
@@ -18,20 +18,32 @@ module.exports = function (app) {
     let userScores = req.body.scores;
     //Converting the user's array of strings into an array of integers
     let newScores = userScores.map(x => parseInt(x));
+    let totalDifference;
     //Logging them to make sure they are received
     console.log("User Score");
     console.log(newScores);
+    let arrayIWant = [];
     //Loop through the breadData array already on server
-    for (let i = 0; i < breadData.length; i++) {
+    breadData.forEach(function (bread) {
       //Assign the scores array of each index to a variable
-      let currentScores = breadData[i].scores
+      let currentScores = bread.scores
       //Log each array to the console
-      for (let j = 0; j < currentScores.length; j++) {
-        console.log(currentScores[j]);
-        //console.log(newScores.map(x => Math.abs(x - currentScores[j])));
-      }
-      //Attempt to caluclate the difference between each number in user score and existing score
-    };
-    //breadData.push(req.body)
-  });
+      console.log(currentScores);
+      let exisBread = 0;
+      let usrBread = 0;
+      currentScores.forEach(function(currentBread) {
+        exisBread += currentBread;
+      });
+      newScores.forEach(function(userBread) {
+        //arrayIWant.push(Math.abs(ele - moreBread));
+        usrBread += userBread;
+      });
+      console.log("breadData " + parseInt(exisBread));
+      console.log("UserData " + parseInt(usrBread));
+      console.log("Total Difference " + parseInt(Math.abs(exisBread - usrBread)));
+      //console.log(totalDifference)
+      //console.log(arrayIWant);
+      //breadData.push(req.body)
+    });
+  })
 }
