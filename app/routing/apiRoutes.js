@@ -10,25 +10,22 @@ module.exports = function (app) {
   });
   //When user submits a post request to server, calculate compatible match, return match as modal, and save their data into breads.js
   app.post("/api/breads", function (req, res) {
-    //Current function to try to caluclate the difference between scores
-    function diff(a, b) {
-      return Math.abs(a - b);
-    };
     //Capturing the user's submitted scores
     let userScores = req.body.scores;
     //Converting the user's array of strings into an array of integers
     let newScores = userScores.map(x => parseInt(x));
-    let totalDifference;
     //Logging them to make sure they are received
     console.log("User Score");
     console.log(newScores);
-    let arrayIWant = [];
+    //Assigning chosen json to variable to send to user for modal
+    let chosenBread;
     //Loop through the breadData array already on server
-    breadData.forEach(function (bread) {
+    breadData.forEach(function (allBread) {
       //Assign the scores array of each index to a variable
-      let currentScores = bread.scores
+      let currentScores = allBread.scores
       //Log each array to the console
       console.log(currentScores);
+      //Assign variables to hold the question score of each existing breadData.scores array and the newly received user.scores array
       let exisBread = 0;
       let usrBread = 0;
       currentScores.forEach(function(currentBread) {
@@ -38,12 +35,22 @@ module.exports = function (app) {
         //arrayIWant.push(Math.abs(ele - moreBread));
         usrBread += userBread;
       });
+      //Variable that calculates the difference in scores of the user.scores and each breadData.scores
+      let totalDifference = Math.abs(exisBread - usrBread);
+      allBread.totalDifference = totalDifference;
       console.log("breadData " + parseInt(exisBread));
       console.log("UserData " + parseInt(usrBread));
-      console.log("Total Difference " + parseInt(Math.abs(exisBread - usrBread)));
-      //console.log(totalDifference)
-      //console.log(arrayIWant);
-      //breadData.push(req.body)
+      console.log("Total Difference " + parseInt(totalDifference));
+      if (allBread.totalDifference <= 3) {
+        chosenBread = allBread;
+      } else if (allBread.totalDifference <= 5) {
+        chosenBread = allBread;        
+      } else if (allBread.totalDifference <= 9) {
+        chosenBread = allBread;        
+      } else {
+        res.send("No compatible matches found");
+      };
     });
+    res.json(chosenBread);
   })
 }
