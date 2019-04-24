@@ -10,19 +10,18 @@
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylsheet" href="../css/survey.css">
     <!--Required scripts for dropdowns and boostrap generally-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!--Full jQuery library for "$" definition and get/post funtionality-->
-    <script src="https://code.jquery.com/jquery.js"></script>
   </head>
   <body>
     <div class="container mw-75">
       <h2 class="mt-2 mb-2">Survey Questions</h2>
       <hr>
       <form>
-        <h4><strong>About you</strong></h4>
+        <h4 class="top"><strong>About you</strong></h4>
         <div class="form-row">
           <label for="name">Name (Required)</label>
           <input type="text" id="name" class="form-control">
@@ -38,7 +37,7 @@
               <option selected class="text-muted">Choose...</option>
               <option value="1">One (Strongly Disagree)</option>
               <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="3">Three (Sometimes)</option>
               <option value="4">Four</option>
               <option value="5">Five (Strongly Agree)</option>
             </select>
@@ -52,7 +51,7 @@
               <option selected class="text-muted">Choose...</option>
               <option value="1">One (Strongly Disagree)</option>
               <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="3">Three (Sometimes)</option>
               <option value="4">Four</option>
               <option value="5">Five (Strongly Agree)</option>
             </select>
@@ -66,7 +65,7 @@
               <option selected class="text-muted">Choose...</option>
               <option value="1">One (Strongly Disagree)</option>
               <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="3">Three (Sometimes)</option>
               <option value="4">Four</option>
               <option value="5">Five (Strongly Agree)</option>
             </select>
@@ -80,7 +79,7 @@
               <option selected class="text-muted">Choose...</option>
               <option value="1">One (Strongly Disagree)</option>
               <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="3">Three (Sometimes)</option>
               <option value="4">Four</option>
               <option value="5">Five (Strongly Agree)</option>
             </select>
@@ -94,7 +93,7 @@
               <option selected class="text-muted">Choose...</option>
               <option value="1">One (Strongly Disagree)</option>
               <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="3">Three (Sometimes)</option>
               <option value="4">Four</option>
               <option value="5">Five (Strongly Agree)</option>
             </select>
@@ -108,7 +107,7 @@
               <option selected class="text-muted">Choose...</option>
               <option value="1">One (Strongly Disagree)</option>
               <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="3">Three (Sometimes)</option>
               <option value="4">Four</option>
               <option value="5">Five (Strongly Agree)</option>
             </select>
@@ -122,7 +121,7 @@
               <option selected class="text-muted">Choose...</option>
               <option value="1">One (Strongly Disagree)</option>
               <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="3">Three (Sometimes)</option>
               <option value="4">Four</option>
               <option value="5">Five (Strongly Agree)</option>
             </select>
@@ -136,7 +135,7 @@
               <option selected class="text-muted">Choose...</option>
               <option value="1">One (Strongly Disagree)</option>
               <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="3">Three (Sometimes)</option>
               <option value="4">Four</option>
               <option value="5">Five (Strongly Agree)</option>
             </select>
@@ -150,7 +149,7 @@
               <option selected class="text-muted">Choose...</option>
               <option value="1">One (Strongly Disagree)</option>
               <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="3">Three (Sometimes)</option>
               <option value="4">Four</option>
               <option value="5">Five (Strongly Agree)</option>
             </select>
@@ -164,7 +163,7 @@
                 <option selected class="text-muted">Choose...</option>
                 <option value="1">One (Strongly Disagree)</option>
                 <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="3">Three (Sometimes)</option>
                 <option value="4">Four</option>
                 <option value="5">Five (Strongly Agree)</option>
               </select>
@@ -181,8 +180,28 @@
           <div class="container">
             <p><a href="/api/breads">API Breads Link</a> | <a href="https://github.com/Rhardin94/BreadFinder" target="_blank">GitHub Repo</a></p>
         </footer>
+        <div class="modal fade" id="match-modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Your Match is....</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body text-center">
+                <h2 id="match-name"></h2>
+                <img id="match-img" style="width:200px; height:200px;"/>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal" target="top">Take the Survey Again?</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
-    <script>
+    <script type="text/javascript">
       $("#submitBtn").on("click", function(event) {
         event.preventDefault();
         function validateForm() {
@@ -214,6 +233,12 @@
           $.post("/api/breads", userBread, function(data) {
             if (data) {
               console.log(data);
+              //Grab data from server response json and add it to modal
+              $("#match-name").text(data.name + " Bread!");
+              $("#match-img").attr("src", data.photo);
+              $("#match-img").attr("alt", "Image of bread");
+              //Make modal appear on the page
+              $("#match-modal").modal("toggle");
             } else {
               console.log("Nope, didn't work");
             }
