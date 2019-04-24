@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background-image: url("https://images.pond5.com/abstract-background-wheat-flour-spots-footage-085299889_prevstill.jpeg");
+      }
+    </style>
+    <!--Required Meta Tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Title-->
+    <title>BreadSurvey</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Required scripts for dropdowns and boostrap generally-->
+    <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+  </head>
+  <body>
+    <div class="container mw-75">
+      <h2 class="mt-2 mb-2 text-white" id="top">Survey Questions</h2>
+      <hr class="text-white">
+      <form class="text-white">
+        <h4><strong>About you</strong></h4>
+        <div class="form-row">
+          <label for="name">Type of Bread (Required)</label>
+          <input type="text" id="name" class="form-control">
+          <label for="photo">Link to Photo (Required)</label>
+          <input type="text" id="photo" class="form-control">
+        </div>
+        <hr class="text-white">
+        <h4><strong>Question 1</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q1">You prefer baking temperatures above 375&deg;F</label>
+            <select class="form-control" id="q1">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three (Sometimes)</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <h4><strong>Question 2</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q2">You find yourself often sliced into small portions</label>
+            <select class="form-control" id="q2">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three (Sometimes)</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <h4><strong>Question 3</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q3">You identify as a more international recipe</label>
+            <select class="form-control " id="q3">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three (Sometimes)</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <h4><strong>Question 4</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q4">You are usually the foundation of a great sandwich</label>
+            <select class="form-control" id="q4">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three (Sometimes)</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <h4><strong>Question 5</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q5">Your allegiance is to a healthier digestive system</label>
+            <select class="form-control" id="q5">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three (Sometimes)</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <h4><strong>Question 6</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q6">You may be the centerpiece to a delectable appetizer</label>
+            <select class="form-control" id="q6">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three (Sometimes)</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <h4><strong>Question 7</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q7">Eggs are one of your main ingredients</label>
+            <select class="form-control" id="q7">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three (Sometimes)</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <h4><strong>Question 8</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q8">You identify as more of a pastry than a traditional loaf</label>
+            <select class="form-control" id="q8">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three (Sometimes)</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <h4><strong>Question 9</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q9">You're primarily flavored/sweetend with fruit</label>
+            <select class="form-control" id="q9">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three (Sometimes)</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <h4><strong>Question 10</strong></h4>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label for="q10">You are more on the light/airy side</label>
+            <select class="form-control" id="q10">
+              <option selected class="text-muted">Choose...</option>
+              <option value="1">One (Strongly Disagree)</option>
+              <option value="2">Two</option>
+              <option value="3">Three (Sometimes)</option>
+              <option value="4">Four</option>
+              <option value="5">Five (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-auto my-1">
+            <button type="submit" class="btn btn-warning" id="submitBtn">Submit</button>
+          </div>
+        </div>
+      </form>
+      <hr class="text-white">
+      <footer class="footer">
+        <div class="container">
+          <p><a href="/api/breads" class="text-warning">API Breads Link</a> | <a href="https://github.com/Rhardin94/BreadFinder" target="_blank" class="text-warning">GitHub Repo</a></p>
+      </footer>
+      <div class="modal fade" id="match-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Your Match is....</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+              <h2 id="match-name"></h2>
+              <img id="match-img" style="width:200px; height:200px;" />
+
+            </div>
+            <div class="modal-footer">
+              <a href="#top"><button type="button" class="btn btn-warning" data-dismiss="modal">Take the Survey
+                  Again?</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $("#submitBtn").on("click", function (event) {
+        event.preventDefault();
+        function validateForm() {
+          let isValid = true;
+          $(".form-control").each(function () {
+            if ($(this).val() === "") {
+              isValid = false;
+            }
+          });
+          return isValid;
+        }
+        if (validateForm()) {
+          let userBread = {
+            name: $("#name").val().trim(),
+            photo: $("#photo").val().trim(),
+            scores: [
+              $("#q1").val(),
+              $("#q2").val(),
+              $("#q3").val(),
+              $("#q4").val(),
+              $("#q5").val(),
+              $("#q6").val(),
+              $("#q7").val(),
+              $("#q8").val(),
+              $("#q9").val(),
+              $("#q10").val()
+            ]
+          };
+          $.post("/api/breads", userBread, function (data) {
+            if (data) {
+              console.log(data);
+              //Grab data from server response json and add it to modal
+              $("#match-name").text(data.name + " Bread!");
+              $("#match-img").attr("src", data.photo);
+              $("#match-img").attr("alt", "Image of bread");
+              //Make modal appear on the page
+              $("#match-modal").modal("toggle");
+            } else {
+              console.log("Nope, didn't work");
+            }
+            $(".form-control").val("");
+          })
+        } else {
+          alert("Please fill out all of the forms before submitting!");
+        }
+      });
+    </script>
+  </body>
+</html>

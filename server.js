@@ -1,6 +1,7 @@
 //File that runs the server via the express module
 //Importing express module
 const express = require("express");
+const path = require("path");
 //Assign variable to express method for server creation
 const app = express();
 //Assing server to a port
