@@ -20,38 +20,41 @@ module.exports = function (app) {
     //Assigning chosen json to variable to send to user for modal
     let chosenBread;
     //Loop through the breadData array already on server
-    breadData.forEach(function (allBread) {
+    breadData.forEach(function(allBread) {
       //Assign the scores array of each index to a variable
-      let currentScores = allBread.scores
+      let currentScores = allBread.scores;
       //Log each array to the console
       console.log("Existing Scores:")
       console.log(currentScores);
       //Assign variables to hold the question score of each existing breadData.scores array and the newly received user.scores array
       let exisBread = 0;
       let usrBread = 0;
-      currentScores.forEach(function(currentBread) {
+      //Loop through existing scores to assign a score integer to exisBread
+      currentScores.forEach(function (currentBread) {
         exisBread += currentBread;
       });
-      newScores.forEach(function(userBread) {
-        //arrayIWant.push(Math.abs(ele - moreBread));
+      //Loop through new user scores to assign score integer to usrBread;
+      newScores.forEach(function (userBread) {
         usrBread += userBread;
       });
       //Variable that calculates the difference in scores of the user.scores and each breadData.scores
-      let totalDifference = Math.abs(exisBread - usrBread);
+      let totalDifference = parseInt(Math.abs(exisBread - usrBread));
       allBread.totalDifference = totalDifference;
       console.log("breadData Score: " + parseInt(exisBread));
       console.log("UserData Score: " + parseInt(usrBread));
       console.log("Total Difference: " + parseInt(totalDifference));
-      if (allBread.totalDifference <= 3) {
-        chosenBread = allBread;
-      } else if (allBread.totalDifference <= 5) {
-        chosenBread = allBread;        
-      } else if (allBread.totalDifference <= 9) {
-        chosenBread = allBread;        
+      if (allBread.totalDifference <= 4) {
+        res.json(allBread);
+      } else if (allBread.totalDifference >= 5) {
+        res.json(allBread);
       } else {
         res.send("No compatible matches found");
       };
+      //Finally checks if user's submitted bread is already in breadData array
+      //If not, pushes their object into the array;
+      if (!req.body.name === allBread.name) {
+        breadData.push(req.body);
+      }
     });
-    res.json(chosenBread);
   })
 }

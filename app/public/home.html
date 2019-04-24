@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      body {
+        background-image: url("https://previews.123rf.com/images/teploleta/teploleta1507/teploleta150700283/42280479-hand-drawn-bakery-seamless-pattern-background-.jpg");
+      }
+
+      </style>
     <!--Required Meta Tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,21 +22,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="jumbotron">
+    <div class="container text-white">
+      <div class="jumbotron bg-warning p-2 text-white">
         <h1 class="text-center"><span class="fa fa-pie-chart"></span>Bread Finder</h1>
-        <hr>
+        <hr class="text-white">
         <h2 class="text-center">Feeling Crumby?</h2>
         <h2 class="text-center">Told you're too kneady?</h2>
         <h2 class = "text-center">Then you deserve butter!</h2>
         <div class="text-center">
-          <a href="/survey"><button class="btn btn-lg btn-warning">Find the PB to your Jelly!</button></a>
+          <a href="/survey"><button class="btn btn-lg btn-dark">Find the PB to your Jelly!</button></a>
         </div>
+        <p><a href="/api/breads" class="text-dark text-left">API Breads Link</a></p>
       </div>
-      <footer class="footer">
-        <div class="container">
-          <p><a href="/api/breads">API Breads Link</a></p>
-      </footer>
     </div>
   </body>
 </html>
