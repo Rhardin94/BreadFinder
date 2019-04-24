@@ -30,11 +30,11 @@ module.exports = function (app) {
       let exisBread = 0;
       let usrBread = 0;
       //Loop through existing scores to assign a score integer to exisBread
-      currentScores.forEach(function (currentBread) {
+      currentScores.forEach(function(currentBread) {
         exisBread += currentBread;
       });
       //Loop through new user scores to assign score integer to usrBread;
-      newScores.forEach(function (userBread) {
+      newScores.forEach(function(userBread) {
         usrBread += userBread;
       });
       //Variable that calculates the difference in scores of the user.scores and each breadData.scores
@@ -43,18 +43,22 @@ module.exports = function (app) {
       console.log("breadData Score: " + parseInt(exisBread));
       console.log("UserData Score: " + parseInt(usrBread));
       console.log("Total Difference: " + parseInt(totalDifference));
+      console.log(allBread.totalDifference);
       if (allBread.totalDifference <= 4) {
-        res.json(allBread);
+        chosenBread = allBread;
       } else if (allBread.totalDifference >= 5) {
-        res.json(allBread);
-      } else {
-        res.send("No compatible matches found");
+        chosenBread = allBread;
       };
       //Finally checks if user's submitted bread is already in breadData array
       //If not, pushes their object into the array;
-      if (!req.body.name === allBread.name) {
+      if (req.body.name !== allBread.name) {
         breadData.push(req.body);
       }
     });
+    //Then sends the chosen match as a json
+    //Cannot get algorithm to function properly, either it tries to send immedietely, which results in an error,
+    // or sends the first object in the breadData array
+    //OR it sends the very last object and completely ignores my if statements checking the totalDifference property of each object
+    res.json(chosenBread);
   })
 }
